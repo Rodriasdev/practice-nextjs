@@ -3,8 +3,10 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "seed": "deno --allow-ffi --allow-read --allow-net --allow-env --unstable-sloppy-imports ./api/seed/route.ts"
   },
+  "type": "module",
   "dependencies": {
     "@heroicons/react": "^2.1.4",
     "@tailwindcss/forms": "^0.5.7",
@@ -12,6 +14,7 @@
     "autoprefixer": "10.4.19",
     "bcrypt": "^5.1.1",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "next": "15.0.0-canary.56",
     "next-auth": "5.0.0-beta.19",
     "postcss": "8.4.38",

@@ -1,4 +1,6 @@
 import './ui/global.css'
+import { montserrat } from './ui/font';
+
 export default function RootLayout({
   children,
 }: {
@@ -6,7 +8,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${montserrat.className} antialiased`}>
+        {children}
+        <footer className='text-center py-10 text-red-900'>
+          <p>Hola</p>
+        </footer>
+      </body>
     </html>
   );
 }
